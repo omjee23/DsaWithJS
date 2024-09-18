@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <title>Insert Element</title>
+
+  <body>
+    <h1>Insert Element in Array</h1>
+    <input type="text" id="position"  placeholder="enter position " />
+    <input type="text" id="newElement" placeholder="Enter new Element" />
+    <button onclick="insertEle()">Insert</button>
+
+    <script>
+    //   let data = [1,2,3,4,6]
+    //   let newEle = 5
+    //   let position = 4
+
+    //   for (let i= data.length - 1; i >= 0; i--){
+    //       if(i >= position){
+    //           data[i+1] = data[i];
+    //           if(i === position){
+    //               data[i] = newEle
+    //           }
+    //       }
+    //   }
+    //   console.log(data);
+      
+    //   document.write(data)
+      function insertEle() {
+        let data = [1, 2, 3, 4, 6];
+        let elePosition = document.getElementById("position").value;
+        let newEle = document.getElementById("newElement").value;
+        console.log(newEle);
+        console.log(elePosition);
+        
+
+        for (let i = data.length - 1; i >= 0; i--) {
+          if (i >= elePosition) {
+            data[i+1] = data[i];
+            if (i === Number(elePosition)) {
+                data[i] = Number(newEle)
+            }
+          }
+          console.log(data, "fcvbfdc");
+          
+        }
+        console.log(data);
+
+        // inbulit function splice 
+        let items = [2,3,4,5]
+        items.splice(1, 0, 6)
+        console.log(items);
+        
+
+
+
+      }
+    </script>
+  </body>
+</html>
