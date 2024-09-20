@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Search Element</title>
+  </head>
+  <body>
+    <h2>Search Element in arrary</h2>
+    <p>const data = [1,2,3,4,5,6,7]</p>
+    <input type="text" id="SearchEle" placeholder="Enter Element" />
+    <button onclick="searchElement()">Search</button>
+    <p id="result"></p>
+
+    <script>
+      // const data = [1,2,3,4,5,6,7]
+      // let searchEle = 7
+      // let index = undefined;
+      // for (let i = 0; i < data.length; i++){
+      //     if(data[i] === searchEle){
+      //         index = i;
+      //         break
+      //     }
+      // }
+      // console.log("Search element index is ", index);
+      // // default function to search element
+
+      // console.log(data.indexOf(searchEle));
+
+      function searchElement() {
+        const searchEle = document.getElementById("SearchEle").value;
+        let index = undefined;
+        const data = [1, 2, 3, 4, 5, 6, 7];
+        for (let i = 0; i < data.length; i++) {
+          if (data[i] === parseInt(searchEle)) {
+            index = i;
+            break;
+          }
+        }
+        console.log("indexOfElement", index);
+        document.getElementById('result').innerText = `Index of Element is ${index !== undefined ? index : 'not found'}`;
+      }
+      
+    </script>
+  </body>
+</html>
